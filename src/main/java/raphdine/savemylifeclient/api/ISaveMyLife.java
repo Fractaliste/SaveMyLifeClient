@@ -1,6 +1,7 @@
 package raphdine.savemylifeclient.api;
 
 import javax.ws.rs.*;
+import raphdine.savemylifeclient.core.IdentificationDto;
 import raphdine.savemylifeclient.core.shutdown.ShutdownStatutDto;
 
 /**
@@ -22,4 +23,8 @@ public interface ISaveMyLife {
     @Path("shutdown/statut")
     @Produces("application/json")
     public ShutdownStatutDto getShutdownStatut();
+
+    @GET
+    @Path("identification")
+    public IdentificationDto getIdentification();
 }
