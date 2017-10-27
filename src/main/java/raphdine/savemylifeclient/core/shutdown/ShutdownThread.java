@@ -27,7 +27,7 @@ public class ShutdownThread implements Runnable {
 
             result = new CmdResultDto();
 
-            String command = "shutdown";
+            String command = "shutdown /s";
             Process cmdProc = Runtime.getRuntime().exec(command);
 
             String stdOut = IOUtils.toString(cmdProc.getInputStream(), "UTF-8");
